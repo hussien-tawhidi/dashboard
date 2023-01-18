@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path"
 import dotenv from "dotenv";
 import colors from "colors";
 import router from "./routes/goalRoutes.js";
@@ -17,6 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/goals/", router);
 app.use("/api/users", userRouter);
+
+
 
 // middleware
 // error handler and error controllers
